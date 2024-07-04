@@ -1,0 +1,25 @@
+/* 短链接项目*/
+type ConvertRequest {
+	LongUrl string `json:"longUrl" validate:"required"`
+}
+
+type ConvertResponse {
+	ShortUrl string `json:"shortUrl"`
+}
+
+type GetLongRequest {
+	ShortUrl string `path:"shortUrl" validate:"required"`
+}
+
+type GetLongResponse {
+	LongUrl string `json:"longUrl"`
+}
+
+service shortener-api {
+	@handler ConvertHandler
+	post /convert (ConvertRequest) returns (ConvertResponse)
+
+	@handler GetLongHandler
+	get /:shortUrl (GetLongRequest) returns (GetLongResponse)
+}
+

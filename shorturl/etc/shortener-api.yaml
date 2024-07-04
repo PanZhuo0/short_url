@@ -1,0 +1,19 @@
+Name: shortener-api
+Host: 0.0.0.0
+Port: 8888
+
+
+ShortUrlDB:
+  DSN: root:123123@tcp(localhost:3306)/go?parseTime=true
+
+SequenceDB:
+  DSN: root:123123@tcp(localhost:3306)/go?parseTime=true
+
+CacheRedis: 
+  - Host: 127.0.0.1:6379
+
+Base62String: 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+ShortUrlBlackList: ["version","fuck","stupid","convert","health","api","css","js"]
+
+ShortDomain: "test.cn"
