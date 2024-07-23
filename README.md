@@ -2,9 +2,9 @@
 
 # 项目整体架构
 ![申请转链接](https://github.com/PanZhuo0/short_url/blob/master/%E8%AF%B7%E6%B1%82%E8%BD%AC%E9%93%BE.png)
-Q：如何避免短链接网址出现敏感词
+Q：如何避免短链接网址出现敏感词  
 A：使用黑名单机制，在config.go中ShortUrlBlackList设置即可，当出现敏感词时，会自动跳过这个
-	这个短链接直接生成下一个短链接，直到合法
+	这个短链接直接生成下一个短链接，直到合法  
 
 
 ![短链接获取长连接](https://github.com/PanZhuo0/short_url/blob/master/%E8%8E%B7%E5%8F%96%E5%8E%9F%E6%9C%AC%E9%93%BE%E6%8E%A5.png)
